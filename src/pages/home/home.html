@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+     Routing and Direction
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-label>
+            <div>
+              <h5>Note : </h5>
+            </div>
+            <div>
+              1. Type your location address and destination address.
+            </div>
+            <br>
+            <div>
+              2. Type only destination address (It will pick your current location).
+            </div>
+          </ion-label>
+        </ion-row>
+
+        <ion-row>
+          <ion-item>
+            <ion-label floating>From</ion-label>
+            <ion-input type="text" [(ngModel)]="From"></ion-input>
+          </ion-item>
+        </ion-row>
+
+        <ion-row>
+        <ion-item>
+          <ion-label floating>Destination</ion-label>
+          <ion-input type="text" [(ngModel)]="Destination"></ion-input>
+        </ion-item>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-list>
+
+    <div align="center">
+      <button ion-button  (click)="DisplayAndAnimateRoute()">Show my Root</button>
+    </div>
+
+
+    <div id="map"></div>
+
+</ion-content>
